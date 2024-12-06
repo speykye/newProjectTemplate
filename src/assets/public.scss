@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+/*******宽度像素换算函数********/
+@function size($n) {
+    @return math.div(math.div($n, $n * 0 + 1), 19.2) * 1vw;
+}
+
+/******高度像素换算函数******/
+@function h($n) {
+    @return math.div(math.div($n, $n * 0 + 1), 10.8) * 1vh;
+}
+
+@mixin FlexBox($type: flex, $position: row, $jusitfy: normal, $align: normal) {
+    display: $type;
+    flex-direction: $position;
+    justify-content: $jusitfy;
+    align-items: $align;
+}
